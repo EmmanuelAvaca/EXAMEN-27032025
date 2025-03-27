@@ -15,10 +15,12 @@ CREATE TABLE "contenedor" (
 	PRIMARY KEY("idContenedor")
 );
 
+
 CREATE TABLE "articuloPedido" (
 	"idArticulo"	INTEGER NOT NULL,
 	"idPedido"	INTEGER NOT NULL,
-	"volumen" integer not null,
+	"volumen"	integer NOT NULL,
+	"embolsado"	INTEGER,
 	PRIMARY KEY("idArticulo","idPedido"),
 	FOREIGN KEY("idArticulo") REFERENCES "articulo"("idArticulo")
 );
@@ -36,6 +38,4 @@ CREATE TABLE "articulo" (
 	"categoria"	TEXT NOT NULL,
 	PRIMARY KEY("idArticulo")
 );
-
-
 
